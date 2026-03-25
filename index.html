@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <script src="js/script.js"></script>
+
+    <!-- Reference Bootstrap CSS to style the form -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<!-- Define margin style -->
+<body class="m-4">
+    <h1 class="mb-4">Employee Management System</h1>
+    <!-- Set style using bootstrap to round edges, add shadow and set width and padding -->
+    <form id="empForm" class="border rounded shadow-sm bg-light w-25 p-3">
+        <div class="mb-3">
+            <label for="id" class="form-label fw-bold">8-Digit Employee ID</label>
+            <!-- Define textbox and reference bootstrap to add styling attributes -->
+            <input type="text" class="form-control" id="id" maxlength="8" required>
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label fw-bold">Name</label>
+            <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="ext" class="form-label fw-bold">4-Digit Extension</label>
+            <input type="text" class="form-control" id="ext" maxlength="4" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label fw-bold">Email</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="department" class="form-label fw-bold">Department</label>
+            <!-- Set values for the dropdown list -->
+            <select class="form-select" id="department" required>
+                <option value="" disabled selected>Select a department</option>
+                <option value="Administrative">Administrative</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Executive">Executive</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Quality Assurance">Quality Assurance</option>
+                <option value="Sales">Sales</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <!-- Add a button and and set the action to reference the js file. -->
+            <button type="submit" class="btn btn-info text-white" id="btnSubmit">Add Employee</button>
+        </div>
+    </form>
+</body>
+</html>
